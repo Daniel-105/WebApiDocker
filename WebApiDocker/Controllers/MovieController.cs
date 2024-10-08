@@ -2,12 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using WebApiDocker.Interfaces;
 
 namespace WebApiDocker.Controllers;
-    [ApiController]
+[ApiController]
 [Route("[controller]")]
 public class MovieController : ControllerBase
 {
     private readonly IRepository<Movie> _movieRepository;
     private readonly IUnitOfWork _unitOfWork;
+
     public MovieController(IRepository<Movie> movieRepostiory, IUnitOfWork unitOfWork)
     {
         _movieRepository = movieRepostiory;
@@ -35,6 +36,7 @@ public class MovieController : ControllerBase
         _unitOfWork.SaveChanges();
         return movie;
     }
+
     [HttpDelete]
     public void DeleteById(int Id)
     {
