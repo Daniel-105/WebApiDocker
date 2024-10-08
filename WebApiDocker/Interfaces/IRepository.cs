@@ -11,5 +11,6 @@ namespace WebApiDocker.Interfaces
         public IEnumerable<T> GetAll();
 
         public void Delete(int Id);
+        public void Update(T entity);
     }
 }

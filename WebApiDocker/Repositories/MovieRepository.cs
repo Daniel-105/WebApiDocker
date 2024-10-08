@@ -32,4 +32,9 @@ public class MovieRepository : IRepository<Movie>
         Movie movie = _dbContext.Movies.Find(Id);
         _dbContext.Movies.Remove(movie);
     }
+
+    public void Update(Movie entity)
+    {
+        _dbContext.Update(entity);
+    }
 }

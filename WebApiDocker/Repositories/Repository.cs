@@ -31,7 +31,12 @@ public class Repository<T> : IRepository<T> where T : class
 
     public void Delete(int Id)
     {
-        T movie = _dbContext.Set<T>().Find(Id);
-        _dbContext.Set<T>().Remove(movie);
+        T entity = _dbContext.Set<T>().Find(Id);
+        _dbContext.Set<T>().Remove(entity);
+    }
+
+    public void Update(T entity)
+    {
+        _dbContext.Update(entity);
     }
 }

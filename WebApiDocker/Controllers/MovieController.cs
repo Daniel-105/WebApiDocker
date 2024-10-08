@@ -41,4 +41,12 @@ public class MovieController : ControllerBase
         _movieRepository.Delete(Id);
         _unitOfWork.SaveChanges();
     }
+
+    [HttpPut]
+    public Movie UpdateMovie(Movie movie)
+    {
+        _movieRepository.Update(movie);
+        _unitOfWork.SaveChanges();
+        return movie;
+    }
 }
