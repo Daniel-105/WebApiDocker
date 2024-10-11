@@ -7,6 +7,7 @@ RUN dotnet publish "./WebApiDocker/WebApiDocker.csproj" -c Release -o /publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
+EXPOSE 80
 COPY --from=build /publish .
 
 ENTRYPOINT ["dotnet", "WebApiDocker.dll"]

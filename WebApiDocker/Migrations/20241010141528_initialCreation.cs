@@ -5,7 +5,7 @@
 namespace WebApiDocker.Migrations
 {
     /// <inheritdoc />
-    public partial class DatabaseCreation : Migration
+    public partial class initialCreation : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

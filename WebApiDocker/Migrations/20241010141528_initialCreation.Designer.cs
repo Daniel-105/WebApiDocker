@@ -11,8 +11,8 @@ using WebApiDocker.Data;
 namespace WebApiDocker.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241008104152_DatabaseCreation")]
-    partial class DatabaseCreation
+    [Migration("20241010141528_initialCreation")]
+    partial class initialCreation
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

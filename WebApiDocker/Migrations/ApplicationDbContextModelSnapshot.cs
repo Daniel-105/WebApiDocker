@@ -37,7 +37,7 @@ namespace WebApiDocker.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Movies", (string)null);
+                    b.ToTable("Movies");
                 });
 #pragma warning restore 612, 618
         }
